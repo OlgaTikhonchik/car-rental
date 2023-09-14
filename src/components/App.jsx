@@ -1,9 +1,11 @@
-import Catalog from 'pages/Catalog/Catalog';
-import Favorites from 'pages/Favorites/Favorites';
-import Home from 'pages/Home/Home';
 import NotFound from 'pages/NotFound/NotFound';
 import { Route, Routes } from 'react-router-dom';
 import SharedLayout from './SharedLayout/SharedLayout';
+import { lazy } from 'react';
+
+const Home = lazy(() => import('../pages/Home/Home'));
+const Catalog = lazy(() => import('../pages/Catalog/Catalog'));
+const Favorites = lazy(() => import('../pages/Favorites/Favorites'));
 
 export const App = () => {
   return (
@@ -14,7 +16,7 @@ export const App = () => {
         alignItems: 'center',
         fontSize: 40,
         color: '#010101',
-        backgroundColor: '#815738',
+        // backgroundColor: '#815738',
         margin: '0 auto',
         padding: '20px',
         maxWidth: '100%',

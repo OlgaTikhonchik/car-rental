@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
 
 export const ContainerLayout = styled.div`
-  background-color: #c89f81;
+  // background-color: #c89f81;
   border-radius: 6px;
   padding: 10px;
   width: 100%;
