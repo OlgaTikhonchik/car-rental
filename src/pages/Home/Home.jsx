@@ -7,14 +7,14 @@ const Home = () => {
     <>
       <Title>
         Welcome! <br />
-        Unlock the Road to Adventure with Our Car Rental Service!
+        Car Rent is a application that provides users with easy access to rental
+        cars !
       </Title>
       <Images src={tesla} alt="car" />
 
       <Text>
-        The ultimate solution for hassle-free car rentals! With a wide range of
-        vehicles to choose from, our user-friendly interface simplifies the
-        process of renting a car.
+        Car Rent is the perfect solution for those who need a car for a short
+        period of time without the commitment of purchasing one.
       </Text>
     </>
   );
