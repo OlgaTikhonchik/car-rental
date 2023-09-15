@@ -24,8 +24,8 @@ export const Img = styled.img`
 export const IconButton = styled.button`
   position: absolute;
   margin: 0;
-  top: 14px;
-  right: 14px;
+  top: 16px;
+  right: 16px;
   border: none;
   cursor: pointer;
   background-color: transparent;
@@ -50,8 +50,8 @@ export const InfoCar = styled.div`
   align-items: center;
   margin-top: 14px;
   margin-bottom: 8px;
-  font-weight: 500;
-  line-height: 24px;
+  // font-weight: 500;
+  // line-height: 24px;
 `;
 export const CarInfo = styled.ul`
   display: flex;
@@ -67,7 +67,7 @@ export const CarText = styled.li`
   line-height: 24px;
 `;
 export const ModelBlue = styled.p`
-  color: #872142;
+  color: #3470ff;
   font-size: 16px;
 `;
 export const Info = styled.div`
@@ -76,9 +76,9 @@ export const Info = styled.div`
   align-items: center;
   color: rgba(18, 20, 23, 0.5);
 
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 18px;
+  // font-size: 12px;
+  // font-weight: 400;
+  // line-height: 18px;
   gap: 4px;
 `;
 export const TextInfo = styled.p`
@@ -103,7 +103,7 @@ export const Button = styled.button`
   font-weight: 600;
   line-height: 20px;
   border-radius: 12px;
-  background-color: #5a7aaf;
+  background-color: #3470ff;
   border: none;
   cursor: pointer;
   outline: none;
@@ -112,6 +112,6 @@ export const Button = styled.button`
 
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover {
-    background-color: #445c84;
+    background-color: #0b44cd;
   }
 `;

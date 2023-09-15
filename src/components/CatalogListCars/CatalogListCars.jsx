@@ -8,11 +8,11 @@ const CatalogListCars = () => {
   const cars = useSelector(state => state.cars.cars.items);
   console.log(cars);
 
-  // const store = useSelector(store => store);
-  // console.log('store:', store);
+  const store = useSelector(store => store);
+  console.log('store:', store);
 
-  // const carsStore = useSelector(store => store.cars);
-  // console.log('carsStore:', carsStore);
+  const carsStore = useSelector(store => store.cars);
+  console.log('carsStore:', carsStore);
   return (
     <Container>
       <List>

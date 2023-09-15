@@ -8,12 +8,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #fff;
-  background: rgb(101, 115, 150);
+  /* background: rgb(101, 115, 150);
   background: linear-gradient(
     180deg,
     rgba(101, 115, 150, 1) 10%,
-    rgb(198, 196, 196) 80%
-  );
+    rgb(198, 196, 196) 80% */
+  /* ); */
 
   width: 100%;
   min-height: 100vh;

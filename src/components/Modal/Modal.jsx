@@ -1,5 +1,30 @@
 import { createPortal } from 'react-dom';
 import { useEffect } from 'react';
+import {
+  AccItem,
+  AccList,
+  AccTitle,
+  Accessories,
+  Backdrop,
+  ButtonClose,
+  CarInfo,
+  CarText,
+  CloseIcon,
+  Container,
+  Content,
+  Descriprion,
+  Img,
+  Info,
+  InfoDetal,
+  InfoWrapper,
+  ModelBlue,
+  RentalButton,
+  RentalContainer,
+  RentalItem,
+  RentalList,
+  RentalTitle,
+  Text,
+} from './Modal.styled';
 
 const modalRoot = document.querySelector('#modal-root');
 
@@ -48,54 +73,71 @@ const Modal = ({
   const addressParts = address.split(', ');
   const city = addressParts[1];
   const country = addressParts[2];
+  const rentalConditionsSplitted = rentalConditions.split('\n', 3);
+  const firstElement = rentalConditionsSplitted[0];
+  const match = firstElement.match(/\d+/);
+  const number = parseInt(match[0], 10);
 
   return createPortal(
-    <div onClick={handleBackdropClick}>
-      <div>
-        <button type="button" aria-label="close button">
-          {' '}
-          x{' '}
-        </button>
-        <img src={img} alt={make} />
-        <h1>
-          {make} <span>{model}</span>, {year}
-        </h1>
-      </div>
-      <div>
-        <ul>
-          <li>{city}</li>
-          <li>{country}</li>
-          <li>id:{id}</li>
-          <li>Year: {year}</li>
-          <li>Type:{type}</li>
-          <li>Fuel Consumption: {fuelConsumption}</li>
-          <li>Engine Size:{engineSize}</li>
-        </ul>
-        <p>{description}</p>
-        <div>
-          <p>Accessories and functionalities:</p>
-          <ul>
-            {functionalities.map((string, index) => (
-              <li key={index}>{string}</li>
-            ))}
-            {accessories.map((string, index) => (
-              <li key={index}>{string}</li>
-            ))}
-          </ul>
-        </div>
-        <div>
-          <p>Rental Conditions: </p>
-          <ul>
-            {rentalConditions.map((condition, index) => (
-              <li key={index}>{condition}</li>
-            ))}
-            <li>Mileage: {mileage}</li>
-            <li>Price:{rentalPrice}</li>
-          </ul>
-        </div>
-      </div>
-      <a href="tel:+380730000000">Rental car</a>
-    </div>,
+    <Backdrop onClick={handleBackdropClick}>
+      <Container>
+        <Content>
+          <ButtonClose type="button" aria-label="close button">
+            <CloseIcon />
+          </ButtonClose>
+          <Img src={img} alt={make} />
+          <InfoWrapper>
+            <Info>
+              <CarInfo>
+                <Text>{make}</Text>
+                <ModelBlue>{model}</ModelBlue>
+                <Text>{year}</Text>
+              </CarInfo>
+            </Info>
+            <div>
+              <InfoDetal>
+                <CarText>{city}</CarText>
+                <CarText>{country}</CarText>
+                <CarText>id:{id}</CarText>
+                <CarText>Year: {year}</CarText>
+                <CarText>Type:{type}</CarText>
+                <CarText>Fuel Consumption: {fuelConsumption}</CarText>
+                <CarText>Engine Size:{engineSize}</CarText>
+              </InfoDetal>
+              <Descriprion>{description}</Descriprion>
+              <Accessories>
+                <AccTitle>Accessories and functionalities:</AccTitle>
+                <AccList>
+                  {functionalities.map((string, index) => (
+                    <AccItem key={index}>{string}</AccItem>
+                  ))}
+                  {accessories.map((string, index) => (
+                    <AccItem key={index}>{string}</AccItem>
+                  ))}
+                </AccList>
+              </Accessories>
+              <RentalContainer>
+                <RentalTitle>Rental Conditions: </RentalTitle>
+                <RentalList>
+                  <RentalItem>
+                    Minimum age: <span>{number}</span>
+                  </RentalItem>
+                  <RentalItem>{rentalConditionsSplitted[1]}</RentalItem>
+                  <RentalItem>{rentalConditionsSplitted[2]}</RentalItem>
+                  <RentalItem>
+                    Mileage: <span>{mileage.toLocaleString('en-EN')}</span>
+                  </RentalItem>
+                  <RentalItem>
+                    Price:<span>{rentalPrice}</span>
+                  </RentalItem>
+                </RentalList>
+              </RentalContainer>
+            </div>
+            <RentalButton href="tel:+380730000000">Rental car</RentalButton>
+          </InfoWrapper>
+        </Content>
+      </Container>
+    </Backdrop>,
     modalRoot
   );
 };

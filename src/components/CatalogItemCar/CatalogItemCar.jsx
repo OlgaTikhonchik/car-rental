@@ -51,6 +51,7 @@ const CatalogItemCar = ({
   };
 
   const [isModalOpen, setIsModalOpen] = useState(false);
+  //const toggleModal = () => setIsModalOpen(prev => !prev);
   const openModal = () => {
     setIsModalOpen(true);
   };
@@ -108,7 +109,7 @@ const CatalogItemCar = ({
 
       {isModalOpen && (
         <Modal
-          onClose={closeModal}
+          onModalClose={closeModal}
           key={id}
           model={model}
           make={make}
