@@ -1,10 +1,15 @@
 import { Images, Text, Title } from './Home.styled';
 
 import tesla from '../../images/tesla.jpg';
+import { Helmet } from 'react-helmet';
 
 const Home = () => {
   return (
     <>
+      <Helmet>
+        <h1>Home</h1>
+      </Helmet>
+
       <Title>
         Welcome! <br />
         Car Rent is a application that provides users with easy access to rental

@@ -1,11 +1,12 @@
 import CatalogItemCar from 'components/CatalogItemCar/CatalogItemCar';
 
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import carsSet from '../../images/carsSet.png';
 
 import Filter from 'components/Filter/Filter';
 import CatalogListCars from 'components/CatalogListCars/CatalogListCars';
 import { Text } from './Favorite.styled';
+import { Helmet } from 'react-helmet';
 
 const Favorites = () => {
   const favorite = useSelector(state => state.favorite.favoriteArray);
@@ -21,7 +22,9 @@ const Favorites = () => {
 
   return (
     <>
-      {/* <h1>Favorites</h1> */}
+      <Helmet>
+        <h1>Favorites</h1>
+      </Helmet>
 
       <Filter />
 

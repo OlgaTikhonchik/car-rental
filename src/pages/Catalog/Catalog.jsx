@@ -7,6 +7,7 @@ import { Loader } from 'components/Loader/Loader';
 import { Button } from './Catalog.styled';
 import Filter from 'components/Filter/Filter';
 import { clearCarsData } from 'redux/carsSlice';
+import { Helmet } from 'react-helmet';
 
 const Catalog = () => {
   const dispatch = useDispatch();
@@ -28,6 +29,10 @@ const Catalog = () => {
 
   return (
     <>
+      <Helmet>
+        <h1>Catatlog</h1>
+      </Helmet>
+
       <Filter />
       <CatalogListCars />
 
