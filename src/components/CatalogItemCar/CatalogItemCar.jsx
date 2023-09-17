@@ -42,7 +42,6 @@ const CatalogItemCar = ({
   const dispatch = useDispatch();
   const favorite = useSelector(state => state.favorite.favoriteArray);
   const followStatus = favorite.includes(id);
-  //const followStatus = favorite.some(favorite => favorite.id === id);
 
   const incrementFavorite = () => {
     dispatch(addToFavoriteList(id));
@@ -60,8 +59,6 @@ const CatalogItemCar = ({
   const closeModal = () => {
     setIsModalOpen(false);
   };
-
-  //const addressParts = address.split(',');
 
   const addressParts = typeof address === 'string' ? address.split(',') : [];
 

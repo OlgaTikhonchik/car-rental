@@ -102,8 +102,6 @@ export const InfoDetal = styled.ul`
   flex-wrap: wrap;
   align-items: center;
   color: rgba(18, 20, 23, 0.5);
-
-  //font-size: 12px;
   font-weight: 400;
   line-height: 18px;
   gap: 3px;
@@ -148,8 +146,6 @@ export const AccList = styled.ul`
   flex-wrap: wrap;
   align-items: center;
   color: rgba(18, 20, 23, 0.5);
-
-  //font-size: 12px;
   font-weight: 400;
   line-height: 18px;
   gap: 3px;

@@ -2,8 +2,6 @@ import CatalogItemCar from 'components/CatalogItemCar/CatalogItemCar';
 import { useSelector } from 'react-redux';
 import { CatalogItem, Container, List } from './CatalogListCar.styled';
 
-//import cars from 'components/adverts.json';
-
 const CatalogListCars = () => {
   const cars = useSelector(state => state.cars.cars.items);
   console.log(cars);

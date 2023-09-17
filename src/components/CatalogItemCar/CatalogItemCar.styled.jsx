@@ -74,9 +74,6 @@ export const Info = styled.div`
   align-items: center;
   color: rgba(18, 20, 23, 0.5);
 
-  // font-size: 12px;
-  // font-weight: 400;
-  // line-height: 18px;
   gap: 4px;
 `;
 export const TextInfo = styled.p`
