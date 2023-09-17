@@ -24,7 +24,9 @@ Home Page: On the Home page, you'll find a comprehensive description of our car
 rental service. We provide an overview of what sets us apart and why you should
 choose us for your car rental needs.
 
-Catalogue Page: The Catalogue page showcases an array of available vehicles. You
+"./assets/screen.png"
+
+Catalog Page: The Catalogue page showcases an array of available vehicles. You
 can scroll through the catalog and load more car cards using the "Load More"
 button. When you reach the end of the catalog, the button disappears, indicating
 that you've seen all the available options.
@@ -34,3 +36,5 @@ that allows you to add the car to your Favorites. This feature helps you keep
 track of the vehicles you're interested in. The Favorites page stores all the
 car cards you've added to your Favorites. This helps you quickly access and
 compare your preferred vehicles.
+
+#
