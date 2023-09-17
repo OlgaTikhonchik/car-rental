@@ -54,3 +54,12 @@ vehicles.
 # Modal
 
 ![modal](./assets/modal.png)
+
+# Technology Stack:
+
+1. React
+2. React Redux
+3. React Toolkit
+4. React Router
+5. Axios
+6. Mockapi
