@@ -1,5 +1,3 @@
-import CatalogItemCar from 'components/CatalogItemCar/CatalogItemCar';
-
 import { useSelector } from 'react-redux';
 import carsSet from '../../images/carsSet.png';
 
