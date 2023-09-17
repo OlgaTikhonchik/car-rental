@@ -21,7 +21,6 @@ const handleFulfilled = (state, action) => {
   state.isLoading = false;
   state.error = null;
   state.items = [...state.items, ...action.payload];
-  //state.items.push(...action.payload);
 };
 
 const carsSlice = createSlice({
