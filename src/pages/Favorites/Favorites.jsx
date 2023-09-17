@@ -5,7 +5,7 @@ import carsSet from '../../images/carsSet.png';
 
 import Filter from 'components/Filter/Filter';
 import CatalogListCars from 'components/CatalogListCars/CatalogListCars';
-import { Text } from './Favorite.styled';
+import { Images, Text } from './Favorite.styled';
 import { Helmet } from 'react-helmet';
 
 const Favorites = () => {
@@ -23,7 +23,7 @@ const Favorites = () => {
   return (
     <>
       <Helmet>
-        <h1>Favorites</h1>
+        <title>Favorites</title>
       </Helmet>
 
       <Filter />
@@ -31,7 +31,7 @@ const Favorites = () => {
       {selectedFavorite.length === 0 ? (
         <>
           <Text>You have not added any cars to your favorites yet.</Text>
-          <img src={carsSet} alt="cars" />
+          <Images src={carsSet} alt="cars" />
         </>
       ) : (
         <ul>

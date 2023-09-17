@@ -30,7 +30,7 @@ const Catalog = () => {
   return (
     <>
       <Helmet>
-        <h1>Catatlog</h1>
+        <title>Catatlog</title>
       </Helmet>
 
       <Filter />

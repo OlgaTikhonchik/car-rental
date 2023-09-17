@@ -51,16 +51,14 @@ const Modal = ({
   useEffect(() => {
     const handleKeyDown = e => {
       if (e.code === 'Escape') {
-        console.log('Нажали ESC, нужно закрыть модалку');
         onModalClose();
       }
     };
-    console.log('Modal componentDidMount');
+    //
     window.addEventListener('keydown', handleKeyDown);
 
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
-      console.log('Modal componentWillUnmount');
     };
   }, [onModalClose]);
 

@@ -12,3 +12,10 @@ export const Text = styled.p`
     color: #815738;
   }
 `;
+
+export const Images = styled.img`
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+`;

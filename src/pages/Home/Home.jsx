@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <h1>Home</h1>
+        <title>Home</title>
       </Helmet>
 
       <Title>
