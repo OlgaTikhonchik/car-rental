@@ -39,10 +39,18 @@ you're interested in. The Favorites page stores all the car cards you've added
 to your Favorites. This helps you quickly access and compare your preferred
 vehicles.
 
+# Home page
+
 ![Home page](./assets/home.png)
+
+# Catalog page
 
 ![Catalog page](./assets/catalog.png)
 
+# Favorite page
+
 ![Favorite page](./assets/favorite.png)
+
+# Modal
 
 ![modal](./assets/modal.png)
