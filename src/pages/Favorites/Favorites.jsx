@@ -29,12 +29,11 @@ const Favorites = () => {
           <img src={carsSet} alt="cars" />
         </>
       ) : (
-        // <ul>
-        //   {favorite.map(car => (
-        //     <CatalogItemCar car={car} key={car.id} />
-        //   ))}
-        // </ul>
-        <CatalogItemCar cars={selectedFavorite} />
+        <ul>
+          {selectedFavorite.map(car => (
+            <CatalogItemCar car={car} key={car.id} />
+          ))}
+        </ul>
       )}
     </>
   );
