@@ -13,6 +13,7 @@ export const Text = styled.p`
   font-size: 30px;
   font-weight: 400;
   text-align: center;
+  color: #523825;
 `;
 
 export const HeartIcon = styled(HiHeart)`
