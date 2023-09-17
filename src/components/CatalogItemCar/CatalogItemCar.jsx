@@ -40,7 +40,7 @@ const CatalogItemCar = ({
   rentalCompany,
 }) => {
   const dispatch = useDispatch();
-  const favorite = useSelector(state => state.favorite);
+  const favorite = useSelector(state => state.favorite.favoriteArray);
   const followStatus = favorite.includes(id);
 
   const incrementFavorite = () => {
@@ -60,7 +60,12 @@ const CatalogItemCar = ({
     setIsModalOpen(false);
   };
 
-  const addressParts = address.split(',');
+  //const addressParts = address.split(',');
+
+  const addressParts = typeof address === 'string' ? address.split(',') : [];
+
+  console.log(typeof address);
+  console.log('addressParts', addressParts);
 
   const city = addressParts[1];
   const country = addressParts[2];
@@ -74,7 +79,7 @@ const CatalogItemCar = ({
           onClick={!followStatus ? incrementFavorite : decrementFavorite}
           type="button"
         >
-          {!followStatus ? <HeartIcon /> : <HeartIconBlue />}
+          .{!followStatus ? <HeartIcon /> : <HeartIconBlue />}
         </IconButton>
         <Img src={img} alt={make} />
       </CarImgWrapper>

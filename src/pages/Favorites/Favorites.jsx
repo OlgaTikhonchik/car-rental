@@ -4,9 +4,10 @@ import { useSelector } from 'react-redux';
 import carsSet from '../../images/carsSet.png';
 
 import Filter from 'components/Filter/Filter';
+import CatalogListCars from 'components/CatalogListCars/CatalogListCars';
 
 const Favorites = () => {
-  const favorite = useSelector(state => state.favorite);
+  const favorite = useSelector(state => state.favorite.favoriteArray);
   const cars = useSelector(state => state.cars.cars.items);
   console.log('cars', cars);
 
