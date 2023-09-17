@@ -43,4 +43,6 @@ vehicles.
 
 ![Catalog page](./assets/catalog.png)
 
+![Favorite page](./assets/favorite.png)
+
 ![modal](./assets/modal.png)
