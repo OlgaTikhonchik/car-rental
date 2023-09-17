@@ -38,7 +38,7 @@ const Catalog = () => {
 
       {isLoading && !error && <Loader />}
       {error && <b>Error: {error}</b>}
-      {25 / 8 > page && !isLoading && (
+      {36 / 8 > page && !isLoading && (
         <Button onClick={handleLoadClick}>Load more</Button>
       )}
     </>
