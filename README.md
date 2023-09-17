@@ -7,16 +7,16 @@ acquaintance and customize advanced features
 
 # The application consists of 3 pages:\
 
-# "/" - the homepage with a general description of the services provided by the
+1. "/" - the homepage with a general description of the services provided by the
 
 company.
 
-# "/catalog" - a page containing a catalog of cars with various
+2. "/catalog" - a page containing a catalog of cars with various
 
 configurations that users can filter by brand, hourly rental price, and mileage
 driven by the car during its use.
 
-# "/favorites" - a page with listings that have
+3. "/favorites" - a page with listings that have
 
 been added to the user's favorites.
 
