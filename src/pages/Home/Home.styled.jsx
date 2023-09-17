@@ -24,6 +24,7 @@ export const Text = styled.h2`
   color: #824113;
   text-align: center;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  margin-bottom: 30px;
 
   :hover,
   :focus {

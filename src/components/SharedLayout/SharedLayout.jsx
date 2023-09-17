@@ -7,6 +7,7 @@ import {
   NavLinkStyled,
 } from './SharedLayout.styled';
 import { Loader } from 'components/Loader/Loader';
+import Footer from 'components/Footer/Footer';
 
 const SharedLayout = () => {
   return (
@@ -23,6 +24,7 @@ const SharedLayout = () => {
           <Outlet />
         </Suspense>
       </main>
+      <Footer />
     </ContainerLayout>
   );
 };

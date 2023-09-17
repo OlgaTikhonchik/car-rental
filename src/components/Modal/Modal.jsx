@@ -70,7 +70,7 @@ const Modal = ({
     }
   };
 
-  const addressParts = address.split(', ');
+  const addressParts = address.split(',');
   const city = addressParts[1];
   const country = addressParts[2];
   const rentalConditionsSplitted = rentalConditions.split('\n', 3);

@@ -1,10 +1,11 @@
 import CatalogItemCar from 'components/CatalogItemCar/CatalogItemCar';
 
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import carsSet from '../../images/carsSet.png';
 
 import Filter from 'components/Filter/Filter';
 import CatalogListCars from 'components/CatalogListCars/CatalogListCars';
+import { Text } from './Favorite.styled';
 
 const Favorites = () => {
   const favorite = useSelector(state => state.favorite.favoriteArray);
@@ -20,19 +21,19 @@ const Favorites = () => {
 
   return (
     <>
-      <h1>Favorites</h1>
+      {/* <h1>Favorites</h1> */}
 
       <Filter />
 
       {selectedFavorite.length === 0 ? (
         <>
-          <p>You have not added any cars to your favorites yet.</p>
+          <Text>You have not added any cars to your favorites yet.</Text>
           <img src={carsSet} alt="cars" />
         </>
       ) : (
         <ul>
           {selectedFavorite.map(car => (
-            <CatalogItemCar car={car} key={car.id} />
+            <CatalogListCars car={car} key={car.id} />
           ))}
         </ul>
       )}

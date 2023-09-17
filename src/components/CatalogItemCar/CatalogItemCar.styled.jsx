@@ -50,8 +50,6 @@ export const InfoCar = styled.div`
   align-items: center;
   margin-top: 14px;
   margin-bottom: 8px;
-  // font-weight: 500;
-  // line-height: 24px;
 `;
 export const CarInfo = styled.ul`
   display: flex;

@@ -42,6 +42,7 @@ const CatalogItemCar = ({
   const dispatch = useDispatch();
   const favorite = useSelector(state => state.favorite.favoriteArray);
   const followStatus = favorite.includes(id);
+  //const followStatus = favorite.some(favorite => favorite.id === id);
 
   const incrementFavorite = () => {
     dispatch(addToFavoriteList(id));
@@ -79,8 +80,9 @@ const CatalogItemCar = ({
           onClick={!followStatus ? incrementFavorite : decrementFavorite}
           type="button"
         >
-          .{!followStatus ? <HeartIcon /> : <HeartIconBlue />}
+          {!followStatus ? <HeartIcon /> : <HeartIconBlue />}
         </IconButton>
+
         <Img src={img} alt={make} />
       </CarImgWrapper>
       <InfoCar>
