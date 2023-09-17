@@ -6,22 +6,25 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Loader } from 'components/Loader/Loader';
 import { Button } from './Catalog.styled';
 import Filter from 'components/Filter/Filter';
+import { clearCarsData } from 'redux/carsSlice';
 
 const Catalog = () => {
   const dispatch = useDispatch();
   const [page, setPage] = useState(1);
   const isLoading = useSelector(state => state.cars.cars.isLoading);
   const error = useSelector(state => state.cars.cars.error);
-  console.log('error', error);
+
+  console.log('page :>> ', page);
+
+  const handleLoadClick = () => setPage(page => page + 1);
+
+  useEffect(() => {
+    dispatch(clearCarsData());
+  }, [dispatch]);
 
   useEffect(() => {
     dispatch(getAllCars(page));
   }, [dispatch, page]);
-
-  const handleLoadClick = () => {
-    setPage(page => page + 1);
-    // setPage(prev => prev + 1);
-  };
 
   return (
     <>
@@ -31,7 +34,7 @@ const Catalog = () => {
 
       {isLoading && !error && <Loader />}
       {error && <b>Error: {error}</b>}
-      {page < 4 && !isLoading && (
+      {25 / 8 > page && !isLoading && (
         <Button onClick={handleLoadClick}>Load more</Button>
       )}
     </>

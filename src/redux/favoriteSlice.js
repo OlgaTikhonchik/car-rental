@@ -8,9 +8,10 @@ export const favoriteSlice = createSlice({
       return (state = [...state, action.payload]);
     },
     deleteToFavoriteList(state, action) {
-      return (state = state.filter(user => user !== action.payload));
+      return (state = state.filter(car => car !== action.payload));
     },
   },
 });
 export const { addToFavoriteList, deleteToFavoriteList } =
   favoriteSlice.actions;
+export const favoriteReducer = favoriteSlice.reducer;

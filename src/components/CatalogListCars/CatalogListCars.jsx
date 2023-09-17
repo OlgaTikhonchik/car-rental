@@ -35,8 +35,9 @@ const CatalogListCars = () => {
             rentalConditions,
             mileage,
           }) => (
-            <CatalogItem key={id}>
+            <CatalogItem>
               <CatalogItemCar
+                key={id}
                 model={model}
                 make={make}
                 year={year}

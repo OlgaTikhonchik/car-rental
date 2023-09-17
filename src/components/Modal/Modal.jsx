@@ -82,7 +82,11 @@ const Modal = ({
     <Backdrop onClick={handleBackdropClick}>
       <Container>
         <Content>
-          <ButtonClose type="button" aria-label="close button">
+          <ButtonClose
+            type="button"
+            aria-label="close button"
+            onClick={onModalClose}
+          >
             <CloseIcon />
           </ButtonClose>
           <Img src={img} alt={make} />

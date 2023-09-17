@@ -16,7 +16,7 @@ import {
 const makesList = [
   'Buick',
   'Volvo',
-  'Hummer',
+  'HUMMER',
   'Subaru',
   'Mitsubishi',
   'Nissan',

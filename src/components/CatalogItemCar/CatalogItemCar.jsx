@@ -51,7 +51,7 @@ const CatalogItemCar = ({
   };
 
   const [isModalOpen, setIsModalOpen] = useState(false);
-  //const toggleModal = () => setIsModalOpen(prev => !prev);
+
   const openModal = () => {
     setIsModalOpen(true);
   };
@@ -60,7 +60,8 @@ const CatalogItemCar = ({
     setIsModalOpen(false);
   };
 
-  const addressParts = address.split(', ');
+  const addressParts = address.split(',');
+
   const city = addressParts[1];
   const country = addressParts[2];
 
