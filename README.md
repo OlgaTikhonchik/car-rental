@@ -8,17 +8,14 @@ acquaintance and customize advanced features
 # The application consists of 3 pages:\
 
 1. "/" - the homepage with a general description of the services provided by the
+   company.
 
-company.
+2. "/catalog" - a page containing a catalog of cars with various configurations
+   that users can filter by brand, hourly rental price, and mileage driven by
+   the car during its use.
 
-2. "/catalog" - a page containing a catalog of cars with various
-
-configurations that users can filter by brand, hourly rental price, and mileage
-driven by the car during its use.
-
-3. "/favorites" - a page with listings that have
-
-been added to the user's favorites.
+3. "/favorites" - a page with listings that have been added to the user's
+   favorites.
 
 Navigation: Our app offers seamless navigation with three main pages - Home,
 Catalogue, and Favorites, all implemented using routing.
