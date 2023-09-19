@@ -12,9 +12,6 @@ const Favorites = () => {
   const favorite = useSelector(state => state.favorite.favoriteArray);
   const selectedFavorite = cars.filter(car => favorite.includes(car.id));
 
-  const favoriteStore = useSelector(store => store.favorite);
-  console.log('favoriteStore:', favoriteStore);
-
   return (
     <>
       <Helmet>
