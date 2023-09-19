@@ -62,9 +62,6 @@ const CatalogItemCar = ({
 
   const addressParts = typeof address === 'string' ? address.split(',') : [];
 
-  // console.log(typeof address);
-  // console.log('addressParts', addressParts);
-
   const city = addressParts[1];
   const country = addressParts[2];
 

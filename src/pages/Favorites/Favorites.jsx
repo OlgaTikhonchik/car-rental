@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import carsSet from '../../images/carsSet.png';
 
 import Filter from 'components/Filter/Filter';
-import CatalogListCars from 'components/CatalogListCars/CatalogListCars';
+
 import { CatalogItem, FavoriteList, Images, Text } from './Favorite.styled';
 import { Helmet } from 'react-helmet';
 import CatalogItemCar from 'components/CatalogItemCar/CatalogItemCar';
@@ -17,9 +17,6 @@ const Favorites = () => {
   const selectedFavorite = cars.filter(car => favorite.includes(car.id));
   console.log('selectedFavorite', selectedFavorite);
 
-  // const selectedFavorite = useSelector(
-  //   state => state.favorite.selectedFavorite
-  // );
   console.log('selectedFavorite', selectedFavorite);
   console.log('selectedFavorite.length', selectedFavorite.length);
 
