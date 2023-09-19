@@ -16,7 +16,6 @@ const Favorites = () => {
   const selectedFavorite = cars.filter(car => favorite.includes(car.id));
   console.log('selectedFavorite', selectedFavorite);
 
-  console.log('selectedFavorite', selectedFavorite);
   console.log('selectedFavorite.length', selectedFavorite.length);
 
   console.log('favorite', favorite);
