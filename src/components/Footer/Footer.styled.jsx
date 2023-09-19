@@ -10,10 +10,13 @@ export const FooterWrapper = styled.footer`
   margin-bottom: 20px;
 `;
 export const Text = styled.p`
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 400;
   text-align: center;
   color: #523825;
+  &:hover {
+    color: #d38146;
+  }
 `;
 
 export const HeartIcon = styled(HiHeart)`
@@ -21,4 +24,8 @@ export const HeartIcon = styled(HiHeart)`
   color: #3470ff;
   width: 40px;
   height: 40px;
+  &:hover {
+    color: #0b44cd;
+    scale: 1.3;
+  }
 `;

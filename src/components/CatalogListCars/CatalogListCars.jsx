@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { CatalogItem, Container, List } from './CatalogListCar.styled';
 
 const CatalogListCars = () => {
-  const cars = useSelector(state => state.cars.cars.items);
+  const cars = useSelector(state => state.cars.items);
   console.log(cars);
 
   const store = useSelector(store => store);
@@ -33,7 +33,7 @@ const CatalogListCars = () => {
             rentalConditions,
             mileage,
           }) => (
-            <CatalogItem>
+            <CatalogItem key={id}>
               <CatalogItemCar
                 key={id}
                 model={model}

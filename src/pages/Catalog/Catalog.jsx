@@ -12,8 +12,8 @@ import { Helmet } from 'react-helmet';
 const Catalog = () => {
   const dispatch = useDispatch();
   const [page, setPage] = useState(1);
-  const isLoading = useSelector(state => state.cars.cars.isLoading);
-  const error = useSelector(state => state.cars.cars.error);
+  const isLoading = useSelector(state => state.cars.isLoading);
+  const error = useSelector(state => state.cars.error);
 
   console.log('page :>> ', page);
 

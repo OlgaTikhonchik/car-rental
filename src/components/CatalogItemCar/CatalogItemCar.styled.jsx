@@ -4,7 +4,7 @@ import { HiHeart } from 'react-icons/hi';
 
 export const Item = styled.div`
   width: 274px;
-  height: 426px;
+  min-height: 426px;
   display: flex;
   flex-direction: column;
 `;
@@ -102,7 +102,7 @@ export const Button = styled.button`
   border: none;
   cursor: pointer;
   outline: none;
-  margin-top: 18px;
+  margin-top: auto;
   box-shadow: 0px 3.43693px 3.43693px 0px rgba(0, 0, 0, 0.25);
 
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
