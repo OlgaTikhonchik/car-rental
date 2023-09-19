@@ -35,11 +35,6 @@ const carsSlice = createSlice({
   extraReducers: builder => {
     builder
       .addCase(getAllCars.fulfilled, handleFulfilled)
-      // .addCase(getAllCarsWithoutPage.fulfilled, (state, action) => {
-      //   state.isLoading = false;
-      //   state.error = null;
-      //   state.allCars = action.payload;
-      // })
 
       .addMatcher(action => {
         action.type.endsWith('/pending');
