@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import carsSet from '../../images/carsSet.png';
 
 import Filter from 'components/Filter/Filter';
@@ -6,8 +6,7 @@ import Filter from 'components/Filter/Filter';
 import { CatalogItem, FavoriteList, Images, Text } from './Favorite.styled';
 import { Helmet } from 'react-helmet';
 import CatalogItemCar from 'components/CatalogItemCar/CatalogItemCar';
-import { getAllCars } from 'redux/operations';
-import { useEffect } from 'react';
+
 const Favorites = () => {
   const cars = useSelector(state => state.cars.items);
 
@@ -23,11 +22,6 @@ const Favorites = () => {
   console.log('favorite', favorite);
   const favoriteStore = useSelector(store => store.favorite);
   console.log('favoriteStore:', favoriteStore);
-
-  // const dispatch = useDispatch();
-  // useEffect(() => {
-  //   dispatch(getAllCars());
-  // }, [dispatch]);
 
   return (
     <>
