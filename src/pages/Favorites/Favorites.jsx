@@ -9,13 +9,9 @@ import CatalogItemCar from 'components/CatalogItemCar/CatalogItemCar';
 
 const Favorites = () => {
   const cars = useSelector(state => state.cars.items);
-
-  console.log('cars', cars);
   const favorite = useSelector(state => state.favorite.favoriteArray);
-
   const selectedFavorite = cars.filter(car => favorite.includes(car.id));
 
-  console.log('favorite', favorite);
   const favoriteStore = useSelector(store => store.favorite);
   console.log('favoriteStore:', favoriteStore);
 
