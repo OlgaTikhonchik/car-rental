@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-export const List = styled.div`
+export const List = styled.ul`
   display: flex;
   flex-wrap: wrap;
   padding: 0;
@@ -19,7 +19,7 @@ export const Container = styled.div`
   justify-content: center;
 `;
 
-export const CatalogItem = styled.div`
+export const CatalogItem = styled.li`
   padding: 0;
   margin: 0;
 `;

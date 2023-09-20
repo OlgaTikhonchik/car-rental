@@ -77,7 +77,7 @@ const CatalogItemCar = ({
           {!followStatus ? <HeartIcon /> : <HeartIconBlue />}
         </IconButton>
 
-        <Img src={img} alt={make} />
+        <Img src={img} alt={make} width={274} height={268} />
       </CarImgWrapper>
       <InfoCar>
         <CarInfo>

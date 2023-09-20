@@ -1,4 +1,4 @@
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import carsSet from '../../images/carsSet.png';
 
 import Filter from 'components/Filter/Filter';
@@ -6,11 +6,18 @@ import Filter from 'components/Filter/Filter';
 import { CatalogItem, FavoriteList, Images, Text } from './Favorite.styled';
 import { Helmet } from 'react-helmet';
 import CatalogItemCar from 'components/CatalogItemCar/CatalogItemCar';
+import { getAllCars } from 'redux/operations';
+import { useEffect } from 'react';
 
 const Favorites = () => {
   const cars = useSelector(state => state.cars.items);
   const favorite = useSelector(state => state.favorite.favoriteArray);
   const selectedFavorite = cars.filter(car => favorite.includes(car.id));
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getAllCars(selectedFavorite));
+  }, [dispatch, selectedFavorite]);
 
   return (
     <>
@@ -28,49 +35,48 @@ const Favorites = () => {
           </>
         ) : (
           <FavoriteList>
-            {selectedFavorite &&
-              selectedFavorite.map(
-                ({
-                  id,
-                  model,
-                  make,
-                  year,
-                  rentalPrice,
-                  address,
-                  rentalCompany,
-                  functionalities,
-                  type,
-                  img,
-                  fuelConsumption,
-                  engineSize,
-                  description,
-                  accessories,
-                  rentalConditions,
-                  mileage,
-                }) => (
-                  <CatalogItem key={id}>
-                    <CatalogItemCar
-                      key={id}
-                      model={model}
-                      make={make}
-                      year={year}
-                      rentalPrice={rentalPrice}
-                      address={address}
-                      rentalCompany={rentalCompany}
-                      functionalities={functionalities}
-                      id={id}
-                      type={type}
-                      img={img}
-                      fuelConsumption={fuelConsumption}
-                      engineSize={engineSize}
-                      description={description}
-                      accessories={accessories}
-                      rentalConditions={rentalConditions}
-                      mileage={mileage}
-                    />
-                  </CatalogItem>
-                )
-              )}
+            {selectedFavorite.map(
+              ({
+                id,
+                model,
+                make,
+                year,
+                rentalPrice,
+                address,
+                rentalCompany,
+                functionalities,
+                type,
+                img,
+                fuelConsumption,
+                engineSize,
+                description,
+                accessories,
+                rentalConditions,
+                mileage,
+              }) => (
+                <CatalogItem key={id}>
+                  <CatalogItemCar
+                    key={id}
+                    model={model}
+                    make={make}
+                    year={year}
+                    rentalPrice={rentalPrice}
+                    address={address}
+                    rentalCompany={rentalCompany}
+                    functionalities={functionalities}
+                    id={id}
+                    type={type}
+                    img={img}
+                    fuelConsumption={fuelConsumption}
+                    engineSize={engineSize}
+                    description={description}
+                    accessories={accessories}
+                    rentalConditions={rentalConditions}
+                    mileage={mileage}
+                  />
+                </CatalogItem>
+              )
+            )}
           </FavoriteList>
         )}
       </div>

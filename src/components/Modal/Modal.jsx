@@ -87,12 +87,12 @@ const Modal = ({
           >
             <CloseIcon />
           </ButtonClose>
-          <Img src={img} alt={make} />
+          <Img src={img} alt={make} width={461} height={248} />
           <InfoWrapper>
             <Info>
               <CarInfo>
                 <Text>{make}</Text>
-                <ModelBlue>{model}</ModelBlue>
+                <ModelBlue>{model},</ModelBlue>
                 <Text>{year}</Text>
               </CarInfo>
             </Info>

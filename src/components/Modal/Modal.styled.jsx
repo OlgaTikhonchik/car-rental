@@ -117,6 +117,7 @@ export const CarText = styled.li`
   padding-right: 3px;
   &:last-child {
     border-right: none;
+    padding-right: 0;
   }
 `;
 export const Descriprion = styled.p`

@@ -16,8 +16,6 @@ export const Img = styled.img`
   display: block;
   width: 100%;
   max-width: 100%;
-  width: 274px;
-  height: 268px;
   border-radius: 14px;
 `;
 
@@ -63,12 +61,14 @@ export const CarText = styled.li`
   color: #121417;
   font-size: 16px;
   line-height: 24px;
+  margin-right: 5px;
 `;
 export const ModelBlue = styled.p`
   color: #3470ff;
   font-size: 16px;
+  margin-left: 3px;
 `;
-export const Info = styled.div`
+export const Info = styled.ul`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -76,7 +76,7 @@ export const Info = styled.div`
 
   gap: 4px;
 `;
-export const TextInfo = styled.p`
+export const TextInfo = styled.li`
   color: rgba(18, 20, 23, 0.5);
   font-size: 12px;
   font-weight: 400;
@@ -86,6 +86,7 @@ export const TextInfo = styled.p`
 
   &:last-child {
     border-right: none;
+    padding-right: 0;
   }
 `;
 export const Button = styled.button`

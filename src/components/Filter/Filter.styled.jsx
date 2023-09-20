@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 export const Label = styled.label`
   font-size: 14px;
   font-weight: 500;
-  color: #8a8a89;
+  color: #523825;
   margin-bottom: 8px;
 `;
 
@@ -10,7 +10,6 @@ export const Form = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  //   gap: 18px;
   margin-left: auto;
   margin-right: auto;
   align-items: flex-start;
@@ -28,6 +27,10 @@ export const Select = styled.select`
   font-weight: 600;
   color: #121417;
   cursor: pointer;
+
+  // &:hover {
+  //   border: 5px solid #523825;
+  // }
 `;
 export const Option = styled.option`
   font-size: 18px;
@@ -91,7 +94,6 @@ export const MileageInputLeft = styled.input`
   font-weight: 500;
   line-height: 20px;
   border-right: 1px solid rgba(138, 138, 137, 0.2);
-  //box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 10px;
 
   &::placeholder {
     color: #121417;
@@ -114,7 +116,6 @@ export const MileageInputRight = styled.input`
   font-size: 18px;
   font-weight: 500;
   line-height: 20px;
-  //box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 10px;
 
   &::placeholder {
     color: #121417;
