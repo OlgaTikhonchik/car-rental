@@ -19,7 +19,6 @@ const persistConfig = {
   key: 'favorite',
   storage,
   whitelist: ['favoriteArray'],
-  // whitelist: ['favoriteArray', 'selectedFavorite'],
 };
 
 const persistedReducer = persistReducer(persistConfig, favoriteReducer);
