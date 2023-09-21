@@ -7,17 +7,23 @@ import { CatalogItem, FavoriteList, Images, Text } from './Favorite.styled';
 import { Helmet } from 'react-helmet';
 import CatalogItemCar from 'components/CatalogItemCar/CatalogItemCar';
 import { getAllCars } from 'redux/operations';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { clearCarsData } from 'redux/carsSlice';
 
 const Favorites = () => {
   const cars = useSelector(state => state.cars.items);
   const favorite = useSelector(state => state.favorite.favoriteArray);
   const selectedFavorite = cars.filter(car => favorite.includes(car.id));
-
+  const [page, setPage] = useState(1);
   const dispatch = useDispatch();
+
   useEffect(() => {
-    dispatch(getAllCars(selectedFavorite));
-  }, [dispatch, selectedFavorite]);
+    dispatch(clearCarsData());
+  }, [dispatch]);
+
+  useEffect(() => {
+    dispatch(getAllCars(page));
+  }, [dispatch, page]);
 
   return (
     <>
