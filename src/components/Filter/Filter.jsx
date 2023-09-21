@@ -45,7 +45,7 @@ const Filter = () => {
         <FormBrand>
           <Label htmlFor="make-select">Car brand</Label>
           <SelectBrand id="make-select">
-            <option value="">Enter the text</option>
+            <option value="without">All cars</option>
             {makesList.map((el, index) => (
               <Option key={index} value={el}>
                 {el}
@@ -85,7 +85,7 @@ const Filter = () => {
             />
           </MileageInputWrapper>
         </FormMileage>
-        <Button type="button"> Search </Button>
+        <Button type="submit"> Search </Button>
       </Saidbar>
     </>
   );

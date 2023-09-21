@@ -1,4 +1,7 @@
 import styled from '@emotion/styled';
+// import { FiChevronDown } from 'react-icons/fi';
+// import { FiChevronUp } from 'react-icons/fi';
+
 export const Label = styled.label`
   font-size: 14px;
   font-weight: 500;
@@ -27,6 +30,8 @@ export const Select = styled.select`
   font-weight: 600;
   color: #121417;
   cursor: pointer;
+  // appearance: none; -убираем стандартную стрелку
+  // overflow: hidden;
 `;
 export const Option = styled.option`
   font-size: 18px;
@@ -34,18 +39,28 @@ export const Option = styled.option`
   color: #121417;
 `;
 
-export const SelectBrand = styled.select`
-  border: none;
-  border-radius: 14px;
-  background-color: #f7f7fb;
+export const SelectBrand = styled(Select)`
   width: 224px;
-  padding: 14px;
-  outline: none;
-  font-size: 18px;
-  font-weight: 600;
-  color: #121417;
-  cursor: pointer;
+  .react-select__indicator {
+    transform: rotate(180deg);
+  }
 `;
+
+// export const ArrowDown = styled(FiChevronDown)`
+//   width: 20px;
+//   height: 20px;
+//   margin: 0;
+//   color: #000000;
+// `;
+
+// export const ArrowUp = styled(FiChevronUp)`
+//   width: 20px;
+//   height: 20px;
+//   margin: 0;
+
+//   color: #000000;
+// `;
+
 export const FormBrand = styled.div`
   display: flex;
   flex-wrap: wrap;
