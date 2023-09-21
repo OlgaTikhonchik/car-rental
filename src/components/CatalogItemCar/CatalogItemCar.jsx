@@ -5,6 +5,7 @@ import {
   CarImgWrapper,
   CarInfo,
   CarText,
+  CarTextPrice,
   HeartIcon,
   HeartIconBlue,
   IconButton,
@@ -87,7 +88,7 @@ const CatalogItemCar = ({
           </CarText>
           <CarText>{year}</CarText>
         </CarInfo>
-        <CarText>{rentalPrice}</CarText>
+        <CarTextPrice>{rentalPrice}</CarTextPrice>
       </InfoCar>
       <Info>
         <TextInfo>{city}</TextInfo>

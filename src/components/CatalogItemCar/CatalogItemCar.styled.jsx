@@ -63,6 +63,16 @@ export const CarText = styled.li`
   line-height: 24px;
   margin-right: 5px;
 `;
+export const CarTextPrice = styled.p`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #121417;
+  font-size: 16px;
+  line-height: 24px;
+  margin-right: 5px;
+`;
+
 export const ModelBlue = styled.p`
   color: #3470ff;
   font-size: 16px;
