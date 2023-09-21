@@ -1,6 +1,4 @@
 import styled from '@emotion/styled';
-// import { FiChevronDown } from 'react-icons/fi';
-// import { FiChevronUp } from 'react-icons/fi';
 
 export const Label = styled.label`
   font-size: 14px;
@@ -45,21 +43,6 @@ export const SelectBrand = styled(Select)`
     transform: rotate(180deg);
   }
 `;
-
-// export const ArrowDown = styled(FiChevronDown)`
-//   width: 20px;
-//   height: 20px;
-//   margin: 0;
-//   color: #000000;
-// `;
-
-// export const ArrowUp = styled(FiChevronUp)`
-//   width: 20px;
-//   height: 20px;
-//   margin: 0;
-
-//   color: #000000;
-// `;
 
 export const FormBrand = styled.div`
   display: flex;
