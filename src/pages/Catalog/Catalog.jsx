@@ -15,8 +15,6 @@ const Catalog = () => {
   const isLoading = useSelector(state => state.cars.isLoading);
   const error = useSelector(state => state.cars.error);
 
-  console.log('page :>> ', page);
-
   const handleLoadClick = () => setPage(page => page + 1);
 
   useEffect(() => {
