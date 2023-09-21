@@ -27,10 +27,6 @@ export const Select = styled.select`
   font-weight: 600;
   color: #121417;
   cursor: pointer;
-
-  // &:hover {
-  //   border: 5px solid #523825;
-  // }
 `;
 export const Option = styled.option`
   font-size: 18px;
