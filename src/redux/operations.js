@@ -14,3 +14,15 @@ export const getAllCars = createAsyncThunk(
     }
   }
 );
+
+export const getAllCarsWithoutPage = createAsyncThunk(
+  'cars/getAllCars',
+  async (_, { rejectWithValue }) => {
+    try {
+      const { data } = await axios.get(`/adverts`);
+      return data;
+    } catch (e) {
+      return rejectWithValue(e.message);
+    }
+  }
+);
