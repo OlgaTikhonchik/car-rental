@@ -2,7 +2,6 @@ import { createSlice } from '@reduxjs/toolkit';
 import { getAllCars, getAllCarsWithoutPage } from './operations';
 
 const initialState = {
-  // items: [],
   items: [],
   // allCarsForFilter: [],
   isLoading: false,

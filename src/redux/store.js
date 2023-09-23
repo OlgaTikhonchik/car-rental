@@ -31,7 +31,7 @@ const persistedReducer = persistReducer(persistConfig, favoriteReducer);
 export const store = configureStore({
   reducer: {
     cars: carsReducer,
-    // filter: filterReducer,
+
     favorite: persistedReducer,
     filter: persistReducer(filterPersistConfig, filterReducer),
   },
