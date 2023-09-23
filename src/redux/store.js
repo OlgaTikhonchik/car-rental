@@ -21,13 +21,19 @@ const persistConfig = {
   whitelist: ['favoriteArray'],
 };
 
+const filterPersistConfig = {
+  key: 'filter',
+  storage,
+};
+
 const persistedReducer = persistReducer(persistConfig, favoriteReducer);
 
 export const store = configureStore({
   reducer: {
     cars: carsReducer,
-    filter: filterReducer,
+    // filter: filterReducer,
     favorite: persistedReducer,
+    filter: persistReducer(filterPersistConfig, filterReducer),
   },
   middleware(getDefaultMiddleware) {
     return getDefaultMiddleware({
