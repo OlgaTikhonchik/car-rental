@@ -14,7 +14,6 @@ const CatalogListCars = () => {
   return (
     <Container>
       <List>
-        {/* {cars.map( */}
         {render.map(
           ({
             id,
