@@ -1,10 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { getAllCars } from './operations';
+import { getAllCars, getAllCarsWithoutPage } from './operations';
 
 const initialState = {
+  // items: [],
   items: [],
-  allCars: [],
-  shownItem: {},
+  // allCarsForFilter: [],
   isLoading: false,
   error: null,
 };
@@ -24,6 +24,12 @@ const handleFulfilled = (state, action) => {
   state.items = [...state.items, ...action.payload];
 };
 
+// const handlegetAllCarsWithoutPageFulfilled = (state, { payload }) => {
+//   state.isLoading = false;
+//   state.error = null;
+//   state.allCarsForFilter = payload;
+// };
+
 const carsSlice = createSlice({
   name: 'cars',
   initialState,
@@ -35,7 +41,10 @@ const carsSlice = createSlice({
   extraReducers: builder => {
     builder
       .addCase(getAllCars.fulfilled, handleFulfilled)
-
+      // .addCase(
+      //   getAllCarsWithoutPage.fulfilled,
+      //   handlegetAllCarsWithoutPageFulfilled
+      // )
       .addMatcher(action => {
         action.type.endsWith('/pending');
       }, handlePending)

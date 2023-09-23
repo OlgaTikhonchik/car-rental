@@ -9,13 +9,18 @@ import CatalogItemCar from 'components/CatalogItemCar/CatalogItemCar';
 import { getAllCars } from 'redux/operations';
 import { useEffect, useState } from 'react';
 import { clearCarsData } from 'redux/carsSlice';
+import { selectCars, selectFavorite, selectFiltredCars } from 'redux/selectors';
 
 const Favorites = () => {
-  const cars = useSelector(state => state.cars.items);
-  const favorite = useSelector(state => state.favorite.favoriteArray);
+  const cars = useSelector(selectCars);
+  const favorite = useSelector(selectFavorite);
+  console.log('favorite', favorite);
   const selectedFavorite = cars.filter(car => favorite.includes(car.id));
+  console.log('selectedFavorite', selectedFavorite);
   const [page, setPage] = useState(1);
   const dispatch = useDispatch();
+  const filtred = useSelector(selectFiltredCars);
+  const render = filtred ? filtred : selectedFavorite;
 
   useEffect(() => {
     dispatch(clearCarsData());
@@ -41,7 +46,7 @@ const Favorites = () => {
           </>
         ) : (
           <FavoriteList>
-            {selectedFavorite.map(
+            {render.map(
               ({
                 id,
                 model,

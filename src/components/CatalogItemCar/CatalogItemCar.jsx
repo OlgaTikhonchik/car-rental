@@ -21,6 +21,7 @@ import {
   addToFavoriteList,
   deleteToFavoriteList,
 } from '../../redux/favoriteSlice';
+import { selectFavorite } from 'redux/selectors';
 
 const CatalogItemCar = ({
   model,
@@ -41,7 +42,7 @@ const CatalogItemCar = ({
   rentalCompany,
 }) => {
   const dispatch = useDispatch();
-  const favorite = useSelector(state => state.favorite.favoriteArray);
+  const favorite = useSelector(selectFavorite);
   const followStatus = favorite.includes(id);
 
   const incrementFavorite = () => {
