@@ -30,6 +30,14 @@ const Favorites = () => {
     dispatch(getAllCars(page));
   }, [dispatch, page]);
 
+  // useEffect(() => {
+  //   if (onFilter) {
+  //     dispatch(getAllCarsWithoutPage());
+  //   }
+  // }, [dispatch, onFilter]);
+
+  // const render = onFilter ? filtred : selectedFavorite;
+
   return (
     <>
       <Helmet>
