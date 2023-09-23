@@ -56,8 +56,6 @@ import Filter from 'components/Filter/Filter';
 import { clearCarsData } from 'redux/carsSlice';
 import { Helmet } from 'react-helmet';
 import { selectError, selectIsLoading } from 'redux/selectors';
-import { useCars } from 'hooks/useCars';
-import { getFilteredCars } from 'components/getFilteredCars';
 
 const Catalog = () => {
   const dispatch = useDispatch();
