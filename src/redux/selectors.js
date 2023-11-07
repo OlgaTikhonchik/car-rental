@@ -10,7 +10,7 @@ export const selectMileageTo = state => state.filter.mileageTo;
 export const selectFavorite = state => state.favorite.favoriteArray;
 
 export const selectCars = state => state.cars.items;
-// export const selectCarsFilter = state => state.cars.allCarsForFilter;
+export const selectAllCars = state => state.cars.allCars;
 export const selectIsLoading = state => state.cars.isLoading;
 export const selectError = state => state.cars.error;
 // export const selectCurrentPage = state => state.cars.currentPage;
@@ -39,3 +39,21 @@ export const selectFiltredCars = createSelector(
     }
   }
 );
+
+// export const selectFiltredFavoriteCars = createSelector(
+//   [selectFiltredCars, selectFavorite],
+//   (cars, favorite) => {
+//     if (favorite) {
+//       return favorite?.filter(car => cars.includes(car.id));
+//     }
+//   }
+// );
+
+// export const selectFavoriteCars = createSelector(
+//   [selectAllCars, selectFavorite],
+//   (allCars, favorites) => {
+//     if (favorites) {
+//       return allCars.filter(car => favorites.includes(car.id));
+//     }
+//   }
+// );

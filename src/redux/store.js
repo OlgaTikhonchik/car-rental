@@ -18,7 +18,7 @@ import { filterReducer } from './filterSlice';
 const persistConfig = {
   key: 'favorite',
   storage,
-  whitelist: ['favoriteArray'],
+  // whitelist: ['favoriteArray'],
 };
 
 const filterPersistConfig = {

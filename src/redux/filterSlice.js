@@ -17,7 +17,7 @@ const filterSlice = createSlice({
       state.price = payload.price;
       state.mileageFrom = payload.mileageFrom;
       state.mileageTo = payload.mileageTo;
-      state.onFilter = payload.onFilter;
+      state.onFilter = true;
     },
   },
 });
