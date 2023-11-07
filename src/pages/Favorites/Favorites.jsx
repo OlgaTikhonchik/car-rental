@@ -53,7 +53,7 @@ const Favorites = () => {
       {isLoading && !error && <Loader />}
 
       <div>
-        {selectedFavorite.length === 0 ? (
+        {favorite.length === 0 ? (
           <>
             <Text>You have not added any cars to your favorites yet.</Text>
             <Images src={carsSet} alt="cars" />
