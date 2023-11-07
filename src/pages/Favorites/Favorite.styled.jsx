@@ -58,3 +58,7 @@ export const Button = styled.button`
     background-color: #0b44cd;
   }
 `;
+
+export const FavoriteWrap = styled.div`
+  min-height: 800px;
+`;
