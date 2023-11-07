@@ -49,7 +49,8 @@ vehicles.
 
 # Favorite page
 
-![Favorite page](./assets/favorite.png)
+![Favorite page](./assets/favorites1.png)
+![Favorite page](./assets/favorites2.png)
 
 # Modal
 
